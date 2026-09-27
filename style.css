@@ -73,14 +73,14 @@ nav ul {
     list-style: none;
 }
 
-nav a {
+nav ul a {
     color: #475569;
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
 }
 
-nav a:hover {
+nav ul a:hover {
     color: #6366f1;
 }
 
@@ -496,5 +496,249 @@ footer {
 
     section {
         padding: 75px 25px;
+    }
+}
+/* ---------- Resume Page ---------- */
+
+.resume-hero {
+    padding: 90px 30px 75px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(139, 92, 246, .13), transparent 30%),
+        linear-gradient(180deg, #fafaff 0%, #ffffff 100%);
+}
+
+.resume-hero h1 {
+    margin-bottom: 12px;
+    color: #111827;
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.resume-hero h2 {
+    color: #475569;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.resume-location {
+    margin-top: 10px;
+    color: #94a3b8;
+}
+
+.resume-section {
+    padding: 85px 30px;
+}
+
+.resume-alt {
+    background: #f8fafc;
+}
+
+.resume-container {
+    display: grid;
+    grid-template-columns: .7fr 1.5fr;
+    gap: 70px;
+}
+
+.resume-content p {
+    margin-bottom: 18px;
+    color: #475569;
+    font-size: 1.05rem;
+}
+
+.competency-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.competency-card {
+    padding: 28px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+}
+
+.competency-card h3 {
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.competency-card p {
+    color: #64748b;
+}
+
+
+/* Jobs */
+
+.resume-job {
+    margin-top: 55px;
+    padding-bottom: 55px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.job-header h3 {
+    color: #111827;
+    font-size: 1.7rem;
+}
+
+.company-detail,
+.job-period {
+    color: #64748b;
+}
+
+.job-period {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.role {
+    margin: 35px 0;
+    padding-left: 25px;
+    border-left: 3px solid #e0e7ff;
+}
+
+.role-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 18px;
+}
+
+.role-heading h4 {
+    color: #1e293b;
+    font-size: 1.15rem;
+}
+
+.role-heading h4 span {
+    display: block;
+    margin-top: 3px;
+    color: #6366f1;
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.role-heading p {
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.role ul {
+    padding-left: 20px;
+}
+
+.role li {
+    margin-bottom: 11px;
+    color: #475569;
+}
+
+
+/* Achievements */
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.achievement {
+    padding: 20px;
+    background: #fafaff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.achievement strong {
+    display: block;
+    color: #6366f1;
+    font-size: 1.8rem;
+}
+
+.achievement span {
+    color: #64748b;
+    font-size: .9rem;
+}
+
+
+/* Credentials */
+
+.credential-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.credential-card {
+    padding: 28px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, .035);
+}
+
+.credential-type {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #6366f1;
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.credential-card h3 {
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+.credential-card p {
+    color: #64748b;
+}
+
+.credential-detail {
+    margin-top: 6px;
+    font-size: .9rem;
+}
+
+.credential-year {
+    margin-top: 15px;
+    color: #94a3b8 !important;
+    font-size: .85rem;
+}
+
+
+/* Resume Mobile */
+
+@media (max-width: 750px) {
+
+    .resume-container,
+    .competency-grid,
+    .credential-grid,
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-container {
+        gap: 30px;
+    }
+
+    .job-header,
+    .role-heading {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .role {
+        padding-left: 18px;
     }
 }
