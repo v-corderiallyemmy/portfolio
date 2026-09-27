@@ -555,7 +555,7 @@ nav ul a:hover {
     object-fit: cover;
 
     /* Controls which part of the original photo is visible */
-    object-position: 50% 42%;
+    object-position: 48% 38%;
 
     border-radius: 30px;
 }
