@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="holo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9c8cf4"/>
+      <stop offset="45%" stop-color="#e7a3dc"/>
+      <stop offset="75%" stop-color="#91c5ef"/>
+      <stop offset="100%" stop-color="#a6e1dd"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100" height="100" rx="24" fill="url(#holo)"/>
+
+  <text
+    x="50"
+    y="64"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="40"
+    font-weight="700"
+    fill="white">EC</text>
+</svg>
