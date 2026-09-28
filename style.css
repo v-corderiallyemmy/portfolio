@@ -2958,3 +2958,55 @@ footer {
     background: rgba(128, 104, 240, 0.08);
     text-decoration: none !important;
 }
+
+/* ================================
+   CORDERIALLY EMMY WORDMARK
+================================ */
+
+.logo.wordmark-logo {
+    width: auto;
+    height: auto;
+    min-width: 0;
+
+    padding: 0;
+    margin: 0;
+
+    background: transparent;
+    background-image: none;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow: visible;
+
+    /* Cancel styling from old EC logo */
+    transform: none;
+}
+
+/* Remove any decorative elements from old logo */
+.logo.wordmark-logo::before,
+.logo.wordmark-logo::after {
+    content: none;
+    display: none;
+}
+
+/* Actual wordmark image */
+.logo.wordmark-logo img {
+    display: block;
+    width: auto;
+    height: 48px;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+/* Override old .logo:hover */
+.logo.wordmark-logo:hover {
+    color: inherit;
+    transform: none;
+    box-shadow: none;
+}
