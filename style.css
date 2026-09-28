@@ -2829,21 +2829,85 @@ footer {
     z-index: 100;
 }
 
-/* Keeps dropdown open while moving mouse into it */
+/* ================================
+   CASE STUDIES DROPDOWN
+================================ */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: #4d4c68;
+    font-family: inherit;
+    font-size: 0.91rem;
+    font-weight: 650;
+
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.nav-dropdown-button:hover {
+    color: var(--purple);
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem;
+    margin-top: 1px;
+    transition: transform 0.2s ease;
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+
+    width: 330px;
+    padding: 7px;
+
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(128, 104, 240, 0.12);
+    border-radius: 14px;
+
+    box-shadow: 0 16px 40px rgba(70, 60, 120, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -5px);
+
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease,
+        visibility 0.18s ease;
+
+    z-index: 100;
+}
+
 .nav-dropdown-menu::before {
     content: "";
     position: absolute;
-    top: -18px;
+    top: -16px;
     left: 0;
     right: 0;
-    height: 18px;
+    height: 16px;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown:focus-within .nav-dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translate(-50%, 0);
 }
 
 .nav-dropdown:hover .dropdown-arrow,
@@ -2852,26 +2916,24 @@ footer {
 }
 
 .nav-dropdown-menu a {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+    display: block;
 
-    padding: 11px 12px;
-    border-radius: 10px;
+    padding: 10px 12px;
+    border-radius: 9px;
+
+    color: #4d4c68;
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.35;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
 }
 
 .nav-dropdown-menu a:hover {
-    background: rgba(128, 104, 240, 0.08);
-}
-
-.nav-dropdown-menu a strong {
-    color: #34324e;
-    font-size: 0.86rem;
-    font-weight: 700;
-}
-
-.nav-dropdown-menu a span {
-    color: #85839a;
-    font-size: 0.72rem;
-    font-weight: 500;
+    color: var(--purple);
+    background: rgba(128, 104, 240, 0.07);
 }
