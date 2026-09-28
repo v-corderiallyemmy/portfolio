@@ -2839,6 +2839,16 @@ footer {
     align-items: center;
 }
 
+/* Creates an invisible hover bridge below Case Studies */
+.nav-dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
+    height: 18px;
+}
+
 .nav-dropdown-button {
     display: flex;
     align-items: center;
@@ -2871,17 +2881,13 @@ footer {
 
 .nav-dropdown-menu {
     position: absolute;
-
-    /* No gap = cursor can move directly into menu */
-    top: 100%;
+    top: calc(100% + 8px);
     right: 0;
 
     width: max-content;
     min-width: 340px;
 
-    /* Creates visual breathing room INSIDE the dropdown
-       instead of putting a gap between button + dropdown */
-    padding: 14px 8px 8px;
+    padding: 8px;
     margin: 0;
 
     background: rgba(255, 255, 255, 0.97);
@@ -2898,12 +2904,12 @@ footer {
     visibility: hidden;
     pointer-events: none;
 
-    transform: translateY(4px);
+    /* No movement when opening */
+    transform: none;
 
     transition:
-        opacity 0.18s ease,
-        transform 0.18s ease,
-        visibility 0.18s ease;
+        opacity 0.15s ease,
+        visibility 0.15s ease;
 
     z-index: 1000;
 }
@@ -2916,8 +2922,6 @@ footer {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-
-    transform: translateY(0);
 }
 
 .nav-dropdown:hover .dropdown-arrow,
@@ -2952,6 +2956,5 @@ footer {
 .nav-dropdown-menu a:hover {
     color: var(--purple) !important;
     background: rgba(128, 104, 240, 0.08);
-
     text-decoration: none !important;
 }
